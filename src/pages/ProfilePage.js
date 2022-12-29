@@ -1,7 +1,14 @@
+import Header from "../components/Header";
+import { useParams } from "react-router-dom";
+
 function ProfilePage() {
+  const pathParams = useParams();
+
   return (
     <section>
-      <h1>Página de perfil</h1>
+      <Header />
+      <br></br>
+      <h1>Página de perfil {pathParams.name}</h1>
     </section>
   );
 }
